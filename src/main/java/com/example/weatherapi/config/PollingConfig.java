@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 public class PollingConfig {
     private boolean enabled;
 
+
     public boolean isEnabled() {
         return enabled;
     }
@@ -15,4 +16,5 @@ public class PollingConfig {
     public void setEnabled(boolean enabled) {
         this.enabled = enabled;
     }
+
 }

@@ -18,7 +18,6 @@ import java.time.Duration;
 
 @Configuration
 @EnableCaching
-@EnableScheduling
 public class CacheConfig {
     private static final Logger logger = LoggerFactory.getLogger(CacheConfig.class);
     private static final String CACHE_LIST_KEY = "weather_city_list";

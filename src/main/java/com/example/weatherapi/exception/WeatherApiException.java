@@ -1,11 +1,20 @@
 package com.example.weatherapi.exception;
 
 public class WeatherApiException extends RuntimeException {
-    public WeatherApiException(String message) {
-        super(message);
+    private final int statusCode;
+    private final String responseBody;
+
+    public WeatherApiException(int statusCode, String responseBody) {
+        super("Weather API error: " + statusCode);
+        this.statusCode = statusCode;
+        this.responseBody = responseBody;
     }
 
-    public WeatherApiException(String message, Throwable cause) {
-        super(message, cause);
+    public int getStatusCode() {
+        return statusCode;
+    }
+
+    public String getResponseBody() {
+        return responseBody;
     }
 }
