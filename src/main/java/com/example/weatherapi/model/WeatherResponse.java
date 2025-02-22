@@ -1,11 +1,9 @@
 package com.example.weatherapi.model;
 
 import com.squareup.moshi.Json;
-import com.squareup.moshi.JsonClass;
 
 import java.util.List;
 
-@JsonClass(generateAdapter = true)
 public record WeatherResponse(
         @Json(name = "weather") List<Weather> weather,
         @Json(name = "temperature") Temperature temperature,
